@@ -5,6 +5,7 @@ const store = configureStore({
   reducer: {
     theme: themeReducer,
   },
+  devTools: process.env.NODE_ENV !== "production",
 });
 
 export type AppState = ReturnType<typeof store.getState>;
