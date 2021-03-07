@@ -1,9 +1,10 @@
-import { configureStore, Store } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import themeReducer from "./theme/themeSlice";
-
+import authenticationReducer from "./authentication/authenticationSlice";
 const store = configureStore({
   reducer: {
     theme: themeReducer,
+    authentication: authenticationReducer,
   },
   devTools: process.env.NODE_ENV !== "production",
 });
